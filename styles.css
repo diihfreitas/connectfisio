@@ -1,0 +1,182 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background-color: #4c74af;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #e0e0e0;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* About Section */
+.about {
+    padding: 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.diegofreitas {
+    background: #e0e0e0;
+}
+.diegofreitas h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.diegofreitas p {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Estilização da barra de pesquisa com filtros */
+/* Estilização do formulário de pesquisa e centralização */
+.search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin: 20px auto; /* Espaçamento superior e inferior e centralização automática nas laterais */
+    width: 100%; /* O formulário ocupará 100% da largura disponível */
+    max-width: 800px; /* Define um limite máximo de largura */
+}
+
+/* Estilo dos inputs e selects */
+.search-form input[type="text"],
+.search-form select {
+    padding: 5px;
+    font-size: 16px;
+    margin-right: 10px; /* Espaçamento entre as caixas */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 180px; /* Define uma largura padrão para as caixas de filtro */
+}
+
+/* Estilo do botão */
+.search-form button {
+    padding: 6px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #45a049;
+}
+
+[data-menu="button"] {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    [data-menu="button"] {
+        display: block;
+        background: #222;
+        border: none;
+        padding: .5rem 1rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-family: monospace;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        margin: 10px;
+    }
+    .js [data-menu="button"]::before {
+        content: '';
+        display: inline-block;
+        height: 2px;
+        width: 12px;
+        background: #fff;
+        box-shadow: 0 4px #fff;
+    }
+}

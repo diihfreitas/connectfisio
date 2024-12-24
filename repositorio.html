@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectFisio Repositório Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobrenos.html">Sobre Nós</a></li>
+                <li class="dropdown">
+                    <a href="repositorio.html" class="dropbtn">Repositório</a>
+                </li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <form class="search-form" onsubmit="return searchFunction()">
+                <input type="text" id="searchInput" placeholder="Pesquisar...">
+                
+                <!-- Filtro por Ano -->
+                <select id="yearFilter">
+                    <option value="">Ano</option>
+                    <!-- Geração automática dos anos de 2014 a 2024 -->
+                    <script>
+                        const currentYear = new Date().getFullYear();
+                        for (let year = 2014; year <= currentYear; year++) {
+                            document.write(`<option value="${year}">${year}</option>`);
+                        }
+                    </script>
+                </select>
+
+                <!-- Filtro por Tipo de Artigo -->
+                <select id="typeFilter">
+                    <option value="">Tipo de Artigo</option>
+                    <option value="Pesquisa de Campo">Pesquisa de Campo</option>
+                    <option value="Revisão Bibliográfica">Revisão Bibliográfica</option>
+                    <option value="Relato de Experiência">Relato de Experiência</option>
+                </select>
+
+                <!-- Filtro por Idioma -->
+                <select id="languageFilter">
+                    <option value="">Idioma</option>
+                    <option value="Português">Português</option>
+                    <option value="Inglês">Inglês</option>
+                    <option value="Espanhol">Espanhol</option>
+                </select>
+
+                <button type="submit">Buscar</button>
+            </form>
+        </nav>
+    </header>
+
+    <footer>
+        <p>&copy; 2024 ConnectFisio. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
