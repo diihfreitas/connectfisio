@@ -20,7 +20,7 @@ async function searchFunction() {
     try {
         let resultsHTML = "";
 
-        const scieloResponse = await fetch(`https://api.scielo.org/search?query=${input}&year=${year}&type=${type}&lang=${language}`);
+        const scieloResponse = await fetch('https://api.scielo.org/search?query=${input}&year=${year}&type=${type}&lang=${language}');
         const scieloData = await scieloResponse.json();
         resultsHTML += "<h3>Resultados SciELO</h3><ul>";
         scieloData.results.forEach(article => {
@@ -28,7 +28,7 @@ async function searchFunction() {
         });
         resultsHTML += "</ul>";
 
-        const pubmedResponse = await fetch(`https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pubmed/?format=json&term=${input}&year=${year}`);
+        const pubmedResponse = await fetch('https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pubmed/?format=json&term=${input}&year=${year}');
         const pubmedData = await pubmedResponse.json();
         resultsHTML += "<h3>Resultados PubMed</h3><ul>";
         pubmedData.results.forEach(article => {
@@ -36,7 +36,7 @@ async function searchFunction() {
         });
         resultsHTML += "</ul>";
 
-        const medlineResponse = await fetch(`https://api.medlineplus.gov/v1/search?query=${input}&year=${year}&lang=${language}`);
+        const medlineResponse = await fetch('https://api.medlineplus.gov/v1/search?query=${input}&year=${year}&lang=${language}');
         const medlineData = await medlineResponse.json();
         resultsHTML += "<h3>Resultados MedLine</h3><ul>";
         medlineData.results.forEach(article => {
